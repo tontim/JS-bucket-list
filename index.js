@@ -1,14 +1,23 @@
 //Container
 const container = document.createElement('div');
 container.style.fontFamily = "Roboto, sans-serif";
-
+container.style.display = "flex";
+container.style.flexDirection = "column";
+container.style.alignItems = "center";
+container.style.justifyContent = "center";
+container.style.height = "100vh";
 //Logo
 const logo = document.createElement('h1');
 logo.textContent = 'Logo';
 
 //Bucket list title
-const bucketListTitle = document.createElement('h2');
+const bucketListTitle = document.createElement('h1');
 bucketListTitle.textContent = 'Bucket List';
+bucketListTitle.style.fontSize = '3rem';
+
+const lineBreak = document.createElement('hr');
+lineBreak.style.width = '50%';
+lineBreak.style.margin = '20px 0';
 
 //Description
 const description = document.createElement('p');
@@ -28,6 +37,7 @@ items.forEach(itemText => {
 //append all elements into container
 container.appendChild(logo);
 container.appendChild(bucketListTitle);
+container.appendChild(lineBreak);
 container.appendChild(description);
 container.appendChild(list);
 
